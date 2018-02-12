@@ -427,7 +427,8 @@ def main():
 
         if not options.quiet:
             sys.stderr.write('\n--- statistics ---\n')
-            sys.stderr.write('%d packets transmitted, %d packets received, %.1f%% packet loss\n' % (sent, rcvd, (float(sent - rcvd) / sent) * 100))
+            sys.stderr.write('%d packets transmitted, %d packets received, %.1f%% packet loss\n' % (sent, rcvd, 
+                             0 if sent == 0 else (float(sent - rcvd) / sent) * 100))
 
 
 if __name__ == '__main__':
