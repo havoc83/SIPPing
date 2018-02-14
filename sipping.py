@@ -310,7 +310,7 @@ def print_reply(buf, template_vars=None, out_regex=None, out_replace=None, err=N
 def main():
         usage = """%prog [OPTIONS]"""
         opt = optparse.OptionParser(usage=usage)
-        opt.add_option('-c', dest='count', type='int', default=sys.maxint,
+        opt.add_option('-c', dest='count', type='int', default=1,
            help='Total number of queries to send')
         opt.add_option('-i', dest='wait', type='float', default=1,
            help='Specify packet send interval time in seconds')
