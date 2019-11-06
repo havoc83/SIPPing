@@ -1,0 +1,12 @@
+REGISTER sip:{{ dest_ip }} SIP/2.0
+Via: SIP/2.0/UDP {{ source_ip }}:{{ source_port }};branch=z9hG4bK-p985iy;rport
+From: "fake" <sip:fake@{{ source_ip }}>;tag=as2e95fad1
+To: <sip:{{ user }}@{{ dest_ip }}:{{ dest_port }};line=kutixubf>
+Contact: <sip:fake@{{ source_ip }}:{{ source_port }}>
+Call-ID: {{ callid }}@fake
+CSeq: {{ seq }} REGISTER
+Max-Forwards: 70
+Supported: path, outbound, gruu
+User-Agent: SIPPing fake UA
+Expires: 3600
+Content-Length: 0

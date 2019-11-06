@@ -1,0 +1,11 @@
+MESSAGE sip:{{ to }}@{{ dest_ip }}:{{ dest_port }};transport=udp SIP/2.0
+Via: SIP/2.0/UDP {{ source_ip }}:{{ source_port }};branch=z9hG4bK001b84f6;rport
+From: "{{ from }}" <sip:{{ from }}@{{ source_ip }}>;tag=as2e95fad1
+To: <sip:{{ to }}@{{ dest_ip }}:{{ dest_port }};line=kutixubf>
+Call-ID: 12341
+CSeq: {{ cseq }} MESSAGE
+Max-Forwards: 70
+Contact: <sip:{{ from }}@{{ source_ip }}:{{ source_port }}>
+Content-Type: text/plain
+
+{{ body }}
