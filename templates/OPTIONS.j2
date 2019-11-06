@@ -1,0 +1,10 @@
+OPTIONS sip:{{ dest_ip }} SIP/2.0
+Via: SIP/2.0/UDP {{ source_ip }}:{{ source_port }};branch=z9hG4bK001b84f6;rport
+From: "sip ping" <sip:ping@{{ source_ip }}>
+To: <sip:{{ dest_ip }}>
+Contact: <sip:ping@{{ source_ip }}>
+Call-ID: 7066d2f12e6f22ec1dc1231f4cade6be@{{ source_ip }}
+User-Agent: SIPPing
+Date: {{ date }}
+Allow: ACK, CANCEL
+Content-Length: 0
