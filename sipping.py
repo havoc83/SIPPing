@@ -177,7 +177,7 @@ class Response(Message):
     __proto = 'SIP'
 
     def unpack(self, buf):
-        f = StringIO(str(buf))
+        f = StringIO(buf.decode())
         line = f.readline()
         l = line.strip().split(None, 2)
         if len(l) < 2 or not l[0].startswith(self.__proto) or not l[1].isdigit():
